@@ -44,4 +44,9 @@ console.log(typeof newArray)
   splice modify the original array
 */
 
+let myNewArray=[2,3,1,3,4,5,6,7,8,9]
+console.log("slice will exclude the last index value",myNewArray.slice(1,3)) //doesn't modify original array
+
+console.log("splice include the last index value",myNewArray.splice(1,3))// modify original array
+
 
