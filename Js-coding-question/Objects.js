@@ -10,9 +10,9 @@ let obj = (fullName,company,salary)=>{
   }
 }
 // memory usage : the copy of methods created whenever the new object is created
-var emp1 = new obj('Yuri Garagin', 'Company 1', 1000000);
-var emp2 = new obj('Dinesh Gupta', 'Company 2', 1039999);
-var emp3 = new obj('Erich Fromm', 'Company 3', 1299483);
+// var emp1 = new obj('Yuri Garagin', 'Company 1', 1000000);
+// var emp2 = new obj('Dinesh Gupta', 'Company 2', 1039999);
+// var emp3 = new obj('Erich Fromm', 'Company 3', 1299483);
 
 
 //  closure is nothing but calling a function inside a function or returning
@@ -53,3 +53,41 @@ arrayList.length=0;
 while(arrayList.length){
     arrayList.pop();
 }
+
+//this is used for accessing the current contexts
+
+const user ={
+    userName:"Mohammed Tajammul",
+    designation :"Associate Consultant",
+    getDetails:function(){
+      console.log(`Hi ${this.userName}, Your designation is ${this.designation}`)
+      console.log(this)
+    }
+};
+
+// user.getDetails()
+// userName="Sam"
+// user.getDetails();
+// console.log(this)// when we're ruuning in the node we'll get {} object where in browser we'll get window fun
+
+// function chai(){
+//     let userName="tajammul";
+//     console.log(this.userName)
+// }
+
+// chai()
+
+// const chai = () =>{
+//     let userName ="Tajammul";
+//     console.log(this.userName);
+// }
+
+// chai()
+
+(function chai(){
+    // this's named IIFE 
+    // when we declare the function with name then its named iife
+    console.log("DB connected... ")//IIFEs prevent pollution of the global JS scope.
+})();
+
+((name)=>console.log(`hi ${name}`))("Tajammul")
