@@ -55,4 +55,12 @@ let append= [...array,...array1].sort((a,b)=> b-a)
 
 console.log(append)
 
+let id=1;
+const s_id= setinterval(()=>{
+    console.log(`$s_id print i++` )
+    if(s_id<10){
+      clearInterval(s)
+    }
+},1000)
+
 
